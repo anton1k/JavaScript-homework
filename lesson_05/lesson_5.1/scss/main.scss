@@ -1,0 +1,85 @@
+@import "vars";
+@import "fonts";
+@import "libs";
+
+::placeholder {
+	color: #666;
+}
+
+::selection {
+	background-color: $accent;
+	color: #fff;
+}
+
+html, body {
+	height: 100%
+}
+
+body {
+	font-size: 16px;
+	min-width: 320px;
+	position: relative;
+	line-height: 1.65;
+	font-family: $default-font;
+	overflow-x: hidden;
+	input, textarea {
+			border: #666 1px solid;
+			outline: none;
+			&:focus:required:invalid {
+				border-color: red;
+			}
+			&:required:valid {
+				border-color: green;
+			}
+	}
+}
+
+.img-responsive {
+	display: block;
+	max-width: 100%;
+	height: auto;
+}
+
+.text-center {
+	text-align: center;
+}
+* {
+	box-sizing: border-box;
+}
+html, body, ul, li{
+    margin: 0;
+    padding: 0;
+}
+body {
+	padding: 10px;
+}
+.block {
+	border: 1px solid red;
+	padding: 10px;
+	width: 700px;
+	position: relative;
+	padding: 0;
+	margin: 0 auto;
+	margin-top: -1px;
+}
+.question {
+	padding: 10px;
+	cursor: pointer;
+}
+.answer {
+	background-color: #999999;
+	padding: 10px;
+	margin: 0;
+	transform: rotateX(100deg);
+	opacity: 0;
+	transition: transform .5s, opacity .5s;
+	display: none;
+	cursor: default;
+}
+.open {
+	// display: block;
+	transform: rotateX(0deg);
+	opacity: 1;
+}
+
+@import "media"; // Always at the end

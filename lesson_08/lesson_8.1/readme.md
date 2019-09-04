@@ -1,0 +1,1 @@
+### модуль аналогов  forEach, filter, map, slice, reduce, splice

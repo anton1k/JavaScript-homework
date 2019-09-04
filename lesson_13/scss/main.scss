@@ -1,0 +1,73 @@
+@import "vars";
+@import "fonts";
+@import "libs";
+
+::placeholder {
+	color: #666;
+}
+
+::selection {
+	background-color: $accent;
+	color: #fff;
+}
+
+html, body {
+	height: 100%
+}
+
+body {
+	font-size: 16px;
+	min-width: 320px;
+	position: relative;
+	line-height: 1.65;
+	font-family: $default-font;
+	overflow-x: hidden;
+	input, textarea {
+			border: #666 1px solid;
+			outline: none;
+			&:focus:required:invalid {
+				border-color: red;
+			}
+			&:required:valid {
+				border-color: green;
+			}
+	}
+}
+
+.img-responsive {
+	display: block;
+	max-width: 100%;
+	height: auto;
+}
+
+.text-center {
+	text-align: center;
+}
+html, body, ul, li{
+    margin: 0;
+    padding: 0;
+}
+
+.gallery{
+    width: 860px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.gallery .photos{
+    position: relative;
+    height: 670px;
+}
+
+.gallery .photos img{
+    width: 100%;
+    position: absolute;
+    left: 0;
+    opacity: 0;
+    transition: opacity 1s;
+}
+
+.gallery .photos img.showed{
+    opacity: 1;
+}
+@import "media"; // Always at the end
